@@ -11,23 +11,55 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <div class="col-sm-6">
-        <label for="eMail" class="form-label">Indirizzo e-Mail</label>
-            <div class="input-group">
+<body class=" bg-primary">
 
-            <input type="text" class="form-control" id="eMail" name="mailInput" placeholder="Username">
-            <div class="input-group-text">@mail.it</div>
+    <div class="container">
+        <div class="row rounded-5 bg-white my-5">
+            <div class="col d-flex flex-column align-items-center">
+                <div class="col-sm-6 d-flex flex-column align-items-center">
+            <h1> Password Checker</h1>
+
+                    <label for="eMail" class="form-label">Indirizzo e-Mail (in minuscolo)</label>
+                        <div class="input-group">
+            
+                        <input type="text" class="form-control" id="eMail" name="mailInput" placeholder="Username">
+                        <div class="input-group-text">@mail.it</div>
+                    </div>
+                  </div>
+            
+            
+                  <div class="d-flex gap-2 justify-content-center py-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center confermaForm" type="button">
+                      Conferma Dati
+                    </button>
+                  </div>
+                <h1 id="output"></h1>
+            </div>
         </div>
-      </div>
+
+        <div class="row rounded-5 bg-white my-5 ">
+            <div class="col d-flex flex-column align-items-center">
+                <h1> Gioca con i dadi</h1>
+                <div class="d-flex flex-column gap-2 justify-content-center py-3">
+                    <button class="btn btn-primary lanciaDadi" type="button">
+                      Lancia i dadi
+                    </button>
+
+                    <div id="containerDadi" class="d-flex flex-wrap justify-content-center">
+                          <div class="mx-1 my-1"> Tu <div id="dado-user"></div> </div>
+                            <span class=" my-auto mx-2"> vs </span>
+                          <div class="mx-1 my-1">  PC <div id="dado-pc"></div> </div>
+                    </div>
+                    <h1 id="risultato" class="text-center"></h1>
+                  </div>
+
+            </div>
+        </div>
 
 
-      <div class="d-flex gap-2 justify-content-center py-3">
-        <button class="btn btn-primary d-inline-flex align-items-center confermaForm" type="button">
-          Conferma Dati
-          <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"></use></svg>
-        </button>
-      </div>
+    </div>
+
+
 
 
     <script src="dadi.js"></script>

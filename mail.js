@@ -14,7 +14,7 @@ btnConferma.addEventListener ("click", function() {
 
     const eMail = mailInputElement.value + "@mail.it";
     console.log(eMail)
-})
+
 
 
 console.log(listaUtenti)
@@ -27,16 +27,21 @@ for (let i = 0; i < listaUtenti.length; i++) {
 
   const utenteCorrente = listaUtenti[i];
 
-  if (utenteCorrente === listaUtenti) {
+
+  if (utenteCorrente === mailInputElement.value) {
     console.log("L'utente risulta registrato");
     utenteConcesso = true;
   }
 
 }
 
-// 
+// controllo match utente
 if (utenteConcesso === true) {
-  console.log("positivo");
+  console.log("Accesso Consentito");
+  document.getElementById("output").innerHTML =('A posto!');
 } else {
-  console.log("negato");
+  console.log("Accesso Negato");
+  document.getElementById("output").innerHTML =("e 'nsomma -.-");
+
 }
+})
